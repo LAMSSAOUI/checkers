@@ -11,10 +11,11 @@ WIN = pygame.display.set_mode((WIDTH , HEIGHT))
 def main():
     run = True 
     clock = pygame.time.Clock()
+    
+    plateau = Plateau()
 
     while run:
         clock.tick(FPS)
-        plateau = Plateau()
         for event in  pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
@@ -23,7 +24,7 @@ def main():
                 pos = pygame.mouse.get_pos()
                 # row , col = get_row_col_from_mouse(pos)
         
-        plateau.draw_squares(WIN)
+        plateau.draw(WIN)
         pygame.display.update()
 
     pygame.quit()
