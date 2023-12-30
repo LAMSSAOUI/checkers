@@ -1,5 +1,5 @@
 import pygame 
-from .constants import BLACK , RED , ROWS , COLS , SQUARE_SIZE , WHITE,blackPion
+from .constants import BLACK , RED , ROWS , COLS , SQUARE_SIZE , WHITE,blackPion , grayPion
 from .Pion import Pion
 
 class Plateau :
@@ -27,9 +27,9 @@ class Plateau :
             for col in range(COLS):
                 if col % 2 == (( row + 1 ) % 2 ) :
                     if row < 3 :
-                        self.plateau[row].append(Pion(row , col , blackPion))
+                        self.plateau[row].append(Pion(row , col , grayPion))
                     elif row > 4 :
-                        self.plateau[row].append(Pion(row , col , BLACK))
+                        self.plateau[row].append(Pion(row , col , blackPion))
                     else :
                         self.plateau[row].append(0)
                 else :
