@@ -1,6 +1,6 @@
 import pygame 
 from Frontend.constants import WIDTH , HEIGHT 
-from Frontend.plateau import Plateau
+from Frontend.Plateau import Plateau
 
 
 FPS = 60
